@@ -34,7 +34,6 @@ body {
   cursor: pointer; }
   @media (min-width: 768px) {
     .workspace-section .paragraph-icon {
-      width: 80px;
       aspect-ratio: 1/1; } }
 
 .workspace-section .workspace-container {
