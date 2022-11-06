@@ -1,11 +1,13 @@
 # Todo List Dashboard
 
-Ingridients
+### Ingridients
 
 -   HTML
 -   CSS / SCSS
 -   Javascript
 -   Node/NPM
+
+### Instalation
 
 ```
 $ git clone https://github.com/mazc0de/dashboard-todo-transisi.git
