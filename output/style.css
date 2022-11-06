@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #252a41;
+  font-family: "Poppins", sans-serif; }
+
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 30px; }
+  @media (min-width: 768px) {
+    .container {
+      display: flex; } }
+
+@media (min-width: 768px) {
+  .workspace-section {
+    width: 50%;
+    display: flex; } }
+
+.workspace-section .paragraph-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #3b3f54;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer; }
+  @media (min-width: 768px) {
+    .workspace-section .paragraph-icon {
+      width: 80px;
+      aspect-ratio: 1/1; } }
+
+.workspace-section .workspace-container {
+  margin: 50px; }
+  @media (min-width: 992px) {
+    .workspace-section .workspace-container {
+      margin: 80px; } }
+  @media (min-width: 1200px) {
+    .workspace-section .workspace-container {
+      margin: 150px; } }
+  .workspace-section .workspace-container h1 {
+    color: #fff;
+    font-weight: 400; }
+  .workspace-section .workspace-container p {
+    color: #6f7485; }
+  .workspace-section .workspace-container .input-container {
+    margin: 30px 0;
+    position: relative; }
+    .workspace-section .workspace-container .input-container .input-field {
+      width: 100%;
+      padding: 15px 15px 15px 60px;
+      color: #fff;
+      font-size: 1rem;
+      background-color: #3b3f54;
+      border: none;
+      border-radius: 15px; }
+    .workspace-section .workspace-container .input-container .input-field::placeholder {
+      color: #6f7485;
+      font-size: 1rem;
+      font-family: "Poppins", sans-serif; }
+    .workspace-section .workspace-container .input-container .icon {
+      font-size: 1rem;
+      color: #6f7485;
+      left: 20px;
+      top: 15px;
+      position: absolute; }
+  .workspace-section .workspace-container .project-container p {
+    color: #fff;
+    font-size: 1.2rem; }
+  .workspace-section .workspace-container .project-container .project-item-wrapper {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .workspace-section .workspace-container .project-container .project-item-wrapper .project-item-component {
+      display: flex;
+      flex-direction: column;
+      width: 29%;
+      margin-bottom: 30px; }
+      .workspace-section .workspace-container .project-container .project-item-wrapper .project-item-component .project-item {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        aspect-ratio: 1/1;
+        background: url("/assets/images/stacked-steps-haikei.svg") no-repeat;
+        background-size: 100%;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #fff;
+        margin-bottom: 30px;
+        position: relative;
+        cursor: pointer; }
+        .workspace-section .workspace-container .project-container .project-item-wrapper .project-item-component .project-item .notification-badge {
+          position: absolute;
+          top: -15px;
+          right: -10px;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: #fff;
+          border: 3px solid #252a41; }
+      .workspace-section .workspace-container .project-container .project-item-wrapper .project-item-component p {
+        color: #6d7082;
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: center; }
+        @media (min-width: 768px) {
+          .workspace-section .workspace-container .project-container .project-item-wrapper .project-item-component p {
+            font-size: 1rem; } }
+      .workspace-section .workspace-container .project-container .project-item-wrapper .project-item-component .project-item:hover {
+        transition: ease-in-out;
+        transition-duration: 100ms;
+        outline-style: solid;
+        outline-offset: 4px; }
+      .workspace-section .workspace-container .project-container .project-item-wrapper .project-item-component .project-item:last-child {
+        background: url("");
+        background-color: #3b3f54; }
+
+@media (min-width: 768px) {
+  .todo-section {
+    width: 50%; } }
+
+.todo-section .todo-container {
+  position: relative;
+  padding: 30px;
+  background-color: #fff;
+  height: 100vh;
+  border-radius: 20px; }
+  .todo-section .todo-container .todo-header-wrapper .todo-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .todo-section .todo-container .todo-header-wrapper .todo-header .title-header {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #000; }
+      @media (min-width: 768px) {
+        .todo-section .todo-container .todo-header-wrapper .todo-header .title-header {
+          font-size: 1.8rem; } }
+    .todo-section .todo-container .todo-header-wrapper .todo-header .profile-image-wrapper {
+      display: flex;
+      gap: 2px;
+      position: relative;
+      justify-content: center;
+      align-items: center; }
+      .todo-section .todo-container .todo-header-wrapper .todo-header .profile-image-wrapper .profile-image-1 {
+        width: 50px;
+        border-radius: 50%;
+        border: 3px solid #fff; }
+      .todo-section .todo-container .todo-header-wrapper .todo-header .profile-image-wrapper .profile-image-2 {
+        width: 50px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        position: absolute;
+        left: -30px; }
+      .todo-section .todo-container .todo-header-wrapper .todo-header .profile-image-wrapper .profile-image-3 {
+        width: 50px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        position: absolute;
+        left: -60px; }
+      .todo-section .todo-container .todo-header-wrapper .todo-header .profile-image-wrapper .plus-profile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        margin-left: 10px;
+        height: 30px;
+        border-radius: 50%;
+        border: solid 3px #ddd;
+        cursor: pointer; }
+        .todo-section .todo-container .todo-header-wrapper .todo-header .profile-image-wrapper .plus-profile i {
+          color: #ddd; }
+  .todo-section .todo-container .todo-header-wrapper p {
+    font-size: 1rem;
+    margin: 20px 0;
+    color: #6f7485; }
+  .todo-section .todo-container .todo-body-wrapper .todo-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .todo-section .todo-container .todo-body-wrapper .todo-body p {
+      font-size: 1.2rem;
+      font-weight: 500; }
+    .todo-section .todo-container .todo-body-wrapper .todo-body i {
+      color: #6f7485;
+      font-size: 1.2rem; }
+  .todo-section .todo-container .todo-body-wrapper .horizontal-line {
+    margin: 20px 0;
+    border-bottom: 2px solid #ddd; }
+  .todo-section .todo-container .todo-body-wrapper .todo-list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: scroll;
+    height: 60vh; }
+    @media (min-width: 768px) {
+      .todo-section .todo-container .todo-body-wrapper .todo-list {
+        height: 50vh; } }
+    .todo-section .todo-container .todo-body-wrapper .todo-list .todo-item {
+      width: 100%;
+      margin: 10px 0;
+      display: flex;
+      align-items: center; }
+      .todo-section .todo-container .todo-body-wrapper .todo-list .todo-item .checkbox-container {
+        position: relative; }
+      .todo-section .todo-container .todo-body-wrapper .todo-list .todo-item .checkbox-container label {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        cursor: pointer;
+        height: 28px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 28px; }
+      .todo-section .todo-container .todo-body-wrapper .todo-list .todo-item .checkbox-container label:after {
+        border: 2px solid #fff;
+        border-top: none;
+        border-right: none;
+        content: "";
+        height: 6px;
+        left: 7px;
+        opacity: 0;
+        position: absolute;
+        top: 8px;
+        transform: rotate(-45deg);
+        width: 12px; }
+      .todo-section .todo-container .todo-body-wrapper .todo-list .todo-item .checkbox-container input[type="checkbox"] {
+        visibility: hidden; }
+      .todo-section .todo-container .todo-body-wrapper .todo-list .todo-item .checkbox-container input[type="checkbox"]:checked + label {
+        background-color: #3ad7dc;
+        border-color: #3ad7dc; }
+      .todo-section .todo-container .todo-body-wrapper .todo-list .todo-item .checkbox-container input[type="checkbox"]:checked + label:after {
+        opacity: 1; }
+      .todo-section .todo-container .todo-body-wrapper .todo-list .todo-item p {
+        padding-left: 20px; }
+      .todo-section .todo-container .todo-body-wrapper .todo-list .todo-item .badge {
+        width: 80px;
+        height: 30px;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px 2px;
+        border-radius: 30px;
+        font-size: 0.8rem; }
+        @media (min-width: 768px) {
+          .todo-section .todo-container .todo-body-wrapper .todo-list .todo-item .badge {
+            width: 100px;
+            font-size: 0.8rem; } }
+      .todo-section .todo-container .todo-body-wrapper .todo-list .todo-item .badge-success {
+        background-color: #b1d7b4;
+        color: #42855b; }
+      .todo-section .todo-container .todo-body-wrapper .todo-list .todo-item .badge-info {
+        background-color: #b9e0ff;
+        color: #1746a2; }
+      .todo-section .todo-container .todo-body-wrapper .todo-list .todo-item .badge-warning {
+        background-color: #ffd384;
+        color: #ff884b; }
+      .todo-section .todo-container .todo-body-wrapper .todo-list .todo-item .badge-muted {
+        background-color: #ddd;
+        color: #6d8299; }
+  .todo-section .todo-container .todo-body-wrapper .btn-add-todo {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background-color: #894dc4;
+    color: #fff;
+    border: none;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 1px 0px 47px 6px #894dc4; }

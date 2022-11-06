@@ -1,0 +1,365 @@
+$bodyColor: #252a41;
+$mutedColor: #3b3f54;
+$btnAddTodo: #894dc4;
+$successColor: #b1d7b4;
+$successColorActive: #42855b;
+$infoColor: #b9e0ff;
+$infoColorActive: #1746a2;
+$warningColor: #ffd384;
+$warningColorActive: #ff884b;
+$muteColor: #6f7485;
+$muteColorActive: #6d8299;
+$grayMuted: #ddd;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $bodyColor;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    @media (min-width: 768px) {
+        display: flex;
+    }
+    width: 100%;
+    height: 100vh;
+    padding: 30px;
+}
+.workspace-section {
+    @media (min-width: 768px) {
+        width: 50%;
+        display: flex;
+    }
+    .paragraph-icon {
+        @media (min-width: 768px) {
+            width: 80px;
+            aspect-ratio: 1/1;
+        }
+        width: 50px;
+        height: 50px;
+        background-color: $mutedColor;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .workspace-container {
+        @media (min-width: 992px) {
+            margin: 80px;
+        }
+        @media (min-width: 1200px) {
+            margin: 150px;
+        }
+        margin: 50px;
+        // box-sizing: border-box;
+        h1 {
+            color: #fff;
+            font-weight: 400;
+        }
+        p {
+            color: $muteColor;
+        }
+        .input-container {
+            margin: 30px 0;
+            position: relative;
+            .input-field {
+                width: 100%;
+                padding: 15px 15px 15px 60px;
+                color: #fff;
+                font-size: 1rem;
+                background-color: $mutedColor;
+                border: none;
+                border-radius: 15px;
+            }
+            .input-field::placeholder {
+                color: $muteColor;
+                font-size: 1rem;
+                font-family: "Poppins", sans-serif;
+            }
+            .icon {
+                font-size: 1rem;
+                color: $muteColor;
+                left: 20px;
+                top: 15px;
+                position: absolute;
+            }
+        }
+        .project-container {
+            p {
+                color: #fff;
+                font-size: 1.2rem;
+            }
+            .project-item-wrapper {
+                margin-top: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                .project-item-component {
+                    display: flex;
+                    flex-direction: column;
+                    width: 29%;
+                    margin-bottom: 30px;
+                    .project-item {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        aspect-ratio: 1/1;
+                        background: url("/assets/images/stacked-steps-haikei.svg") no-repeat;
+                        // background-color: #b1d7b4;
+                        background-size: 100%;
+                        border-radius: 10px;
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        color: #fff;
+                        margin-bottom: 30px;
+                        position: relative;
+                        cursor: pointer;
+                        .notification-badge {
+                            position: absolute;
+                            top: -15px;
+                            right: -10px;
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            background-color: #fff;
+                            border: 3px solid $bodyColor;
+                        }
+                    }
+                    p {
+                        @media (min-width: 768px) {
+                            font-size: 1rem;
+                        }
+                        color: #6d7082;
+                        font-size: 1.2rem;
+                        font-weight: 500;
+                        text-align: center;
+                    }
+                    .project-item:hover {
+                        transition: ease-in-out;
+                        transition-duration: 100ms;
+                        outline-style: solid;
+                        outline-offset: 4px;
+                    }
+                    .project-item:last-child {
+                        background: url("");
+                        background-color: $mutedColor;
+                    }
+                }
+            }
+        }
+    }
+}
+.todo-section {
+    @media (min-width: 768px) {
+        width: 50%;
+    }
+    .todo-container {
+        position: relative;
+        padding: 30px;
+        background-color: #fff;
+        height: 100vh;
+        border-radius: 20px;
+        .todo-header-wrapper {
+            .todo-header {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .title-header {
+                    @media (min-width: 768px) {
+                        font-size: 1.8rem;
+                    }
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    color: #000;
+                }
+                .profile-image-wrapper {
+                    display: flex;
+                    gap: 2px;
+                    position: relative;
+                    justify-content: center;
+                    align-items: center;
+                    .profile-image-1 {
+                        width: 50px;
+                        border-radius: 50%;
+                        border: 3px solid #fff;
+                    }
+                    .profile-image-2 {
+                        width: 50px;
+                        border-radius: 50%;
+                        border: 3px solid #fff;
+                        position: absolute;
+                        left: -30px;
+                    }
+                    .profile-image-3 {
+                        width: 50px;
+                        border-radius: 50%;
+                        border: 3px solid #fff;
+                        position: absolute;
+                        left: -60px;
+                    }
+                    .plus-profile {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 30px;
+                        margin-left: 10px;
+                        height: 30px;
+                        border-radius: 50%;
+                        border: solid 3px $grayMuted;
+                        cursor: pointer;
+                        i {
+                            color: $grayMuted;
+                        }
+                    }
+                }
+            }
+            p {
+                font-size: 1rem;
+                margin: 20px 0;
+                color: $muteColor;
+            }
+        }
+        .todo-body-wrapper {
+            .todo-body {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                p {
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                }
+                i {
+                    color: $muteColor;
+                    font-size: 1.2rem;
+                }
+            }
+            .horizontal-line {
+                margin: 20px 0;
+                border-bottom: 2px solid $grayMuted;
+            }
+
+            .todo-list {
+                @media (min-width: 768px) {
+                    height: 50vh;
+                }
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                overflow: scroll;
+                height: 60vh;
+
+                .todo-item {
+                    width: 100%;
+                    margin: 10px 0;
+                    display: flex;
+                    // justify-content: space-between;
+                    align-items: center;
+
+                    .checkbox-container {
+                        position: relative;
+                    }
+
+                    .checkbox-container label {
+                        background-color: #fff;
+                        border: 1px solid #ccc;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        height: 28px;
+                        left: 0;
+                        position: absolute;
+                        top: 0;
+                        width: 28px;
+                    }
+
+                    .checkbox-container label:after {
+                        border: 2px solid #fff;
+                        border-top: none;
+                        border-right: none;
+                        content: "";
+                        height: 6px;
+                        left: 7px;
+                        opacity: 0;
+                        position: absolute;
+                        top: 8px;
+                        transform: rotate(-45deg);
+                        width: 12px;
+                    }
+
+                    .checkbox-container input[type="checkbox"] {
+                        visibility: hidden;
+                    }
+
+                    .checkbox-container input[type="checkbox"]:checked + label {
+                        background-color: #3ad7dc;
+                        border-color: #3ad7dc;
+                    }
+
+                    .checkbox-container input[type="checkbox"]:checked + label:after {
+                        opacity: 1;
+                    }
+                    p {
+                        padding-left: 20px;
+                    }
+                    .badge {
+                        @media (min-width: 768px) {
+                            width: 100px;
+                            font-size: 0.8rem;
+                        }
+                        width: 80px;
+                        height: 30px;
+                        margin-left: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 2px 2px;
+                        border-radius: 30px;
+                        font-size: 0.8rem;
+                    }
+                    .badge-success {
+                        background-color: $successColor;
+                        color: $successColorActive;
+                    }
+                    .badge-info {
+                        background-color: $infoColor;
+                        color: $infoColorActive;
+                    }
+                    .badge-warning {
+                        background-color: $warningColor;
+                        color: $warningColorActive;
+                    }
+                    .badge-muted {
+                        background-color: $grayMuted;
+                        color: $muteColorActive;
+                    }
+                }
+            }
+            .btn-add-todo {
+                position: absolute;
+                right: 20px;
+                bottom: 20px;
+                background-color: $btnAddTodo;
+                color: #fff;
+                border: none;
+                width: 50px;
+                height: 50px;
+                cursor: pointer;
+                border-radius: 15px;
+                box-shadow: 1px 0px 47px 6px $btnAddTodo;
+            }
+        }
+    }
+}

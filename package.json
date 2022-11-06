@@ -1,0 +1,14 @@
+{
+  "name": "todo-transisi",
+  "version": "1.0.0",
+  "description": "technical test PT Transisi Teknologi Mandiri",
+  "main": "index.html",
+  "scripts": {
+    "build": "node-sass -w input/style.scss output/style.css"
+  },
+  "author": "daffa hanifisyafiq",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.56.0"
+  }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="output/style.css" />
+        <title>Dashboard for Task Management</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="workspace-section">
+                <div class="paragraph-icon">
+                    <i class="fa-solid fa-align-left"></i>
+                </div>
+                <div class="workspace-container">
+                    <h1>Hi Samantha</h1>
+                    <p>Welcome back to the workspace, we missed You!</p>
+                    <div class="input-container">
+                        <input type="text" class="input-field" placeholder="Search task or project..." />
+                        <i class="fa-solid fa-magnifying-glass icon"></i>
+                    </div>
+                    <div class="project-container">
+                        <p>Project (13)</p>
+                        <div class="project-item-wrapper">
+                            <div class="project-item-component">
+                                <div class="project-item">GH</div>
+                                <p>Green House</p>
+                            </div>
+                            <div class="project-item-component">
+                                <div class="project-item">CP</div>
+                                <p>Crypto Punk</p>
+                            </div>
+                            <div class="project-item-component">
+                                <div class="project-item">
+                                    EC
+                                    <div class="notification-badge"></div>
+                                </div>
+                                <p>Easy Crypto</p>
+                            </div>
+                            <div class="project-item-component">
+                                <div class="project-item">TA</div>
+                                <p>Travel App</p>
+                            </div>
+                            <div class="project-item-component">
+                                <div class="project-item">
+                                    LP
+                                    <div class="notification-badge"></div>
+                                </div>
+                                <p>Landing Page</p>
+                            </div>
+                            <div class="project-item-component">
+                                <div class="project-item">8+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="todo-section">
+                <div class="todo-container">
+                    <div class="todo-header-wrapper">
+                        <div class="todo-header">
+                            <p class="title-header">Cyber Punk</p>
+                            <div class="profile-image-wrapper">
+                                <img src="/assets/images/profile-1.jpg" alt="profile 1" class="profile-image-1" />
+                                <img src="/assets/images/profile-2.jpg" alt="profile 2" class="profile-image-2" />
+                                <img src="/assets/images/profile-3.jpg" alt="profile 3" class="profile-image-3" />
+                                <div class="plus-profile">
+                                    <i class="fa-solid fa-plus icon-plus-profile"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, laudantium.</p>
+                    </div>
+                    <div class="todo-body-wrapper">
+                        <div class="todo-body">
+                            <p>Today</p>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        <div class="horizontal-line"></div>
+                        <div id="todo-list" class="todo-list"></div>
+                        <button class="btn-add-todo" onclick="add()">
+                            <i class="fa-solid fa-plus fa-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="https://kit.fontawesome.com/341d146363.js" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+</html>
